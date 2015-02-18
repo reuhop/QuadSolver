@@ -1,0 +1,34 @@
+//Reuben 2/18/15
+
+#include<iostream>
+using namespace std;
+
+
+int main()
+{
+	//float since i will take sqrt
+	float a,b,c;
+	//the two x-ints
+	float x1,x2;
+	//asks user for values and then allows them to type it in
+	cout<<"What is A\n";
+	cin>>a;
+	cout<<"What is B\n";
+	cin>>b;
+	cout<<"What is C\n";
+	cin>>c;
+	//gives them what the equation is based on the values given
+	cout<<"Your equation is "<<a<<"X^2+"<<b<<"X+"<<c<<"\n";
+	//checks if intercept is real
+	if (sqrt(b*b-4*a*c)>=0)
+	{
+		//if so, calculate x-ints and print them
+		x1=(-b+sqrt(b*b-4*a*c))/(2*a);
+		x2=(-b-sqrt(b*b-4*a*c))/(2*a);
+		cout<<"First X-int = "<<x1<<", Second X-int = "<<x2<<"\n";
+	}
+	//if not, say that the x-ints are unreal
+	else
+		cout<<"X-int is unreal\n";
+	system ("pause");
+}
